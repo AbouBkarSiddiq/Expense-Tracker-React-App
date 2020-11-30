@@ -3,7 +3,7 @@ import styles from './styles';
 export const IncomeExpense = () => {
     return (
         <div className={styles.incomeExpense}>
-            <div className={styles.liContainer}>
+            <div className={styles.liContainer+styles.borderRight}>
                 Income
                 <h3 className={styles.incomePrice}>0$</h3>
             </div>
