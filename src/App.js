@@ -1,29 +1,17 @@
 import styles from './appStyles';
-import { Header } from './Components/header/head';
-import { CurrentBalance } from './Components/currentBalance/currentbalance';
-import { IncomeExpense } from './Components/income&expense/IncomeExpense';
-import { TransactionHistory } from './Components/transactionhistory/transHistory';
-import { AddNewTransactions} from './Components/addnewtrans/addNewTrans';
+import { Provider } from 'react-redux';
+import ExpensePage from "./Pages/Expense";
+import store from "./Redux/store";
+
 
 function App() {
 
   return (
     <div className={styles.wholeApp}>
-      <Header />
-      <div>
-        <CurrentBalance />
-      </div>
-      <div>
-        <IncomeExpense />
-      </div>
-      <div>
-        <TransactionHistory />
-      </div>
-      <div>
-        <AddNewTransactions />
-      </div>
+      <Provider store={store}>
+        <ExpensePage />
+      </Provider>
     </div>
-
   );
 }
 
